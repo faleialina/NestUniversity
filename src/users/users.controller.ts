@@ -8,12 +8,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { AppService } from './app.service';
-import { iUser, iUserWithId } from './interfaces/user.interface';
+import { iUser, iUserWithId } from '../interfaces';
+import { UsersService } from './users.service';
 
-@Controller()
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+@Controller('/users')
+export class UsersController {
+  constructor(private readonly appService: UsersService) {}
 
   @Get()
   getItemDB(): iUserWithId[] | string {
