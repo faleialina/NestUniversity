@@ -7,6 +7,9 @@ export interface iUser {
 export interface iUserWithId extends iUser {
   id: number;
 }
+export interface OrderRequestBody {
+  itemName: string;
+}
 export interface iOrders {
   userId: number;
   itemName: string;

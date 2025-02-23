@@ -10,7 +10,7 @@ export class OrdersService {
   }
   postItem(obj: iOrders): iOrdersWithId[] {
     this.isValidOrters(obj);
-    if (!obj.userId || !obj.itemName) throw new Error('error');
+    if (!obj.itemName) throw new Error('error');
 
     const newId: number =
       orders.length === 0 ? 1 : orders[orders.length - 1].id + 1;
